@@ -7,50 +7,62 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Password Guardian</h1>
+    <header class="page-header">
+        <h1>Password Guardian</h1>
+    </header>
 
-    <!-- Input Section -->
-    <div class="section">
-        <p class="section-title">Test your password’s strength:</p>
-        <input type="password" id="passwordInput" placeholder="Enter your password here" autocomplete="off">
-        <div class="show-password">
-            <input type="checkbox" id="showPassword">
-            <label for="showPassword">Show password</label>
-        </div>
-    </div>
-
-    <!-- Criteria Section -->
-    <div class="section">
-        <p class="section-title">Does your password contain:</p>
-        <div class="criteria-container">
-            <div class="criteria">
-                <div class="criterion" id="uppercase">Upper-Case</div>
-                <div class="criterion" id="lowercase">Lower-Case</div>
-                <div class="criterion" id="number">Number</div>
-                <div class="criterion" id="special">Special Character</div>
+    <main class="content">
+        <!-- Input Section -->
+        <div class="section">
+            <p class="section-title">Test your password’s strength:</p>
+            <input type="password" id="passwordInput" placeholder="Enter your password here" autocomplete="off">
+            <div class="show-password">
+                <input type="checkbox" id="showPassword">
+                <label for="showPassword">Show password</label>
             </div>
         </div>
-    </div>
-
-    <!-- Strength Section -->
-    <div class="section">
-        <p class="section-title">Password Strength:</p>
-        <div class="strength-container">
-            <div id="strengthBar"></div>
         </div>
-        <div class="strength-labels">
-            <span>Pointless</span>
-            <span>Medium</span>
-            <span>Very Strong</span>
+
+        <!-- Criteria Section -->
+        <div class="section">
+            <p class="section-title">Does your password contain:</p>
+            <div class="criteria-container">
+                <div class="criteria">
+                    <div class="criterion" id="uppercase">Upper-Case</div>
+                    <div class="criterion" id="lowercase">Lower-Case</div>
+                    <div class="criterion" id="number">Number</div>
+                    <div class="criterion" id="special">Special Character</div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- Leak Check Section -->
-    <div class="section">
-        <p class="section-title">Is my password leaked?</p>
-        <p id="breachResult"></p>
-    </div>
+        <!-- Strength Section -->
+        <div class="section">
+            <p class="section-title">Password Strength:</p>
+            <div class="strength-container">
+                <div id="strengthBar"></div>
+            </div>
+            <p id="strengthMessage" class="strength-message"></p>
+            <div class="strength-labels">
+                <span>Pointless</span>
+                <span>Medium</span>
+                <span>Very Strong</span>
+            </div>
+        </div>
 
+        <!-- Leak Check Section -->
+        <div class="section">
+            <p class="section-title">Is my password leaked?</p>
+            <p id="breachResult"></p>
+        </div>
+
+        <div class="section">
+            <p class="section-title">Estimated Crack Time:</p>
+            <p id="crackTime" class="crack-time"></p>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js" integrity="sha512-TZlMGFY9xKj38t/5m2FzJ+RM/aD5alMHDe26p0mYUMoCF5G7ibfHUQILq0qQPV3wlsnCwL+TPRNK4vIWGLOkUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
