@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Guardian</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Password Guardian</h1>
+
+    <!-- Input Section -->
+    <div class="section">
+        <p class="section-title">Test your password’s strength:</p>
+        <input type="password" id="passwordInput" placeholder="Enter your password here" autocomplete="off">
+        <div class="show-password">
+            <input type="checkbox" id="showPassword">
+            <label for="showPassword">Show password</label>
+        </div>
+    </div>
+
+    <!-- Criteria Section -->
+    <div class="section">
+        <p class="section-title">Does your password contain:</p>
+        <div class="criteria-container">
+            <div class="criteria">
+                <div class="criterion" id="uppercase">Upper-Case</div>
+                <div class="criterion" id="lowercase">Lower-Case</div>
+                <div class="criterion" id="number">Number</div>
+                <div class="criterion" id="special">Special Character</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Strength Section -->
+    <div class="section">
+        <p class="section-title">Password Strength:</p>
+        <div class="strength-container">
+            <div id="strengthBar"></div>
+        </div>
+        <div class="strength-labels">
+            <span>Pointless</span>
+            <span>Medium</span>
+            <span>Very Strong</span>
+        </div>
+    </div>
+
+    <!-- Leak Check Section -->
+    <div class="section">
+        <p class="section-title">Is my password leaked?</p>
+        <p id="breachResult"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

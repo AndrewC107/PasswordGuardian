@@ -1,0 +1,131 @@
+/* ---------- General Layout ---------- */
+body {
+    background-color: #FCEED1;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* ---------- Title ---------- */
+h1 {
+    background-color: #DFDCBB;
+    color: black;
+    font-weight: bold;
+    font-size: 28px;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Sections ---------- */
+.section {
+    margin-bottom: 35px;
+    text-align: left;
+    width: 380px;
+}
+
+.section-title {
+    font-weight: bold;
+    color: black;
+    margin-bottom: 8px;
+}
+
+/* ---------- Input ---------- */
+#passwordInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: white;
+    outline: none;
+}
+
+.show-password {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.show-password label {
+    margin-left: 5px;
+    font-size: 14px;
+    color: black;
+}
+
+/* ---------- Criteria Container ---------- */
+.criteria-container {
+    border: 1.5px solid #333333;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.criteria {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.criterion {
+    background-color: #d9d9d9;
+    border: 1.5px solid black;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 14px;
+    min-width: 110px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* ---------- Strength Bar ---------- */
+.strength-container {
+    width: 100%;
+    height: 25px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 8px;
+}
+
+#strengthBar {
+    height: 100%;
+    width: 0%;
+    background-color: red;
+    border-radius: 10px;
+    transition: width 0.4s ease, background-color 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- Strength Labels ---------- */
+.strength-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+}
+
+/* ---------- Breach Result ---------- */
+#breachResult {
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    margin-top: 6px;
+}
